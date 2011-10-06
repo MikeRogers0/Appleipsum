@@ -21,14 +21,23 @@
 <body>
 
   <div id="container">
-    <header>
-
+    <header class="ipsum">
+    	<h1>iPsum</h1>
+    	<h2>Introducing Apple iPsum - It's the moust amazing placeholder text yet.</h2>
     </header>
     <div id="main" role="main">
+    	<section id="controller"><img src="img/placeholders/how_much_genius_do_you_want.png" alt="how_much_genius_do_you_want" width="462" height="34" /> <img src="img/placeholders/dropdown.png" alt="dropdown" width="160" height="40" id="lipsum_levels" /></section>
+    	
+    	<section id="lipsum_code" contenteditable="true">
+    		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ultricies dui in eros imperdiet faucibus a et tellus. Praesent elit eros, ornare vel vestibulum id, tristique in orci. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed tempor consectetur tortor, sed pharetra est aliquam quis. Donec sem sapien, varius at pharetra vel, adipiscing non turpis. Duis elementum, ipsum eu porta laoreet, nisi ipsum tempus risus, eu varius augue nisl in libero. Duis eget nulla id augue consectetur congue. Quisque lacinia tortor eu libero fermentum viverra. Morbi risus justo, dapibus ac sollicitudin eget, interdum blandit risus.</p>
 
+<p>Sed aliquet velit sed nunc mollis vitae hendrerit ipsum eleifend. Quisque convallis nisi quis lorem elementum condimentum. Donec at nunc massa, nec tincidunt dui. Donec suscipit rutrum nulla sit amet ornare. Integer faucibus ultricies elit sit amet tristique. Mauris est turpis, viverra vel lobortis eget, bibendum sed ipsum. Donec iaculis blandit libero, vitae feugiat neque cursus vel. Cras ut magna id purus fermentum imperdiet. Nunc malesuada, turpis non iaculis iaculis, sem urna accumsan turpis, ut placerat nibh neque sed nulla. Proin quam ante, iaculis tristique laoreet et, aliquet ut nibh. Quisque ultricies sollicitudin nibh sit amet pellentesque.</p>
+
+<p>Sed aliquet velit sed nunc mollis vitae hendrerit ipsum eleifend. Quisque convallis nisi quis lorem elementum condimentum. Donec at nunc massa, nec tincidunt dui. Donec suscipit rutrum nulla sit amet ornare. Integer faucibus ultricies elit sit amet tristique. Mauris est turpis, viverra vel lobortis eget, bibendum sed ipsum. Donec iaculis blandit libero, vitae feugiat neque cursus vel. Cras ut magna id purus fermentum imperdiet. Nunc malesuada, turpis non iaculis iaculis, sem urna accumsan turpis, ut placerat nibh neque sed nulla. Proin quam ante, iaculis tristique laoreet et, aliquet ut nibh. Quisque ultricies sollicitudin nibh sit amet pellentesque.</p>
+    	</section>
     </div>
     <footer>
-
+    	<img src="img/placeholders/footer.png" alt="footer" width="855" height="117" />
     </footer>
   </div> <!--! end of #container -->
 

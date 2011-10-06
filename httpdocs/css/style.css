@@ -63,19 +63,66 @@ td { vertical-align: top; }
 
 
 /* ==|== primary styles =====================================================
-   Author: 
+   Author: Mike Rogers @Rogem002
    ========================================================================== */
+   
+#container{
+	width: 930px;
+	margin: 0 auto;
+}
 
+header{
+	height: 200px; 
+}
+h1, h2{
+	text-indent: -9999px;
+	float:left;
+}
+h2{
+	float:right;
+}
+.ipsum h1{
+	background: url(../img/logos/ipsum.png) no-repeat left top;
+	width: 287px;
+	height:88px;
+}
+.ipsum h2{
+	background: url(../img/usp/introducing_apple_ipsum.png) no-repeat left top;
+	width: 368px;
+	height:112px;
+}
 
+#main{
+	background: #f3f3f3 url(../img/content_header.png) no-repeat left top;
+	min-height: 100px;
+	padding: 40px 0;
+}
 
+section{
+	width: 700px;
+	margin: 0 auto;
+}
 
+#lipsum_levels{
+	float:right;
+}
 
+#lipsum_code{
+	width: 650px;
+	padding: 5px 25px;
+	margin: 30px auto 0 auto;
+	
+	height: 275px;
+	background: #fff;
+	border: 1px #e0e0e0 solid;
+	border-radius: 7px;
+	overflow-y: scroll;
+}
 
-
-
-
-
-
+footer{
+background: #f3f3f3;
+	text-align: center;
+}
 
 
 
