@@ -157,9 +157,10 @@ footer{
 	bottom: 0;
 }
 
+/* Lots of the dock is based on http://www.zurb.com/playground/osx-dock */
 footer ul{
 	background: url(../img/dock/gloss.png) repeat-x left 80%, url(../img/dock/mid.png) repeat-x left bottom;
-	height: 100px;
+	height: 90px;
 	margin: 0 auto;
 	position: relative;
 	width: 700px;
@@ -181,19 +182,22 @@ footer ul::after{
 footer li{
 	list-style: none;
 	float: left;
-	overflow: hidden;
 	margin-right: 30px;
 }
 footer li a{
 	float: left;
+	-webkit-transition: 0.15s linear;
+	height:90px;
+}
+footer a img{
+	-webkit-box-reflect: below 2px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0.45, transparent), to(rgba(255, 255, 255, 0.25)));
 	
 }
-fotter li.current{
+footer li a.current{
 	background: url(../img/dock/orb.png) no-repeat bottom center;
-		-webkit-transform-origin: center bottom;
-	-webkit-transform: scale(1.25)
+		
 }
-fotter li a:hover{
+footer li a:hover{
 	-webkit-transform-origin: center bottom;
 	-webkit-transform: scale(1.25);
 }
