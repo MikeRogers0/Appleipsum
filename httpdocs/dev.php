@@ -37,20 +37,19 @@
     	</div>
     	</section>
     	<section id="controls">
-    		<a href="#text" data-type="text" id="copy_text">Copy text to clipboard</a>
-    		<a href="#html" data-type="html" id="copy_html">Copy HTML to clipboard</a>
+    		<a href="#html" data-type="html" id="copy_html" class="button">Copy HTML</a>
+    		<a href="#text" data-type="text" id="copy_text" class="button">Copy Text</a>
+    		<img src="/img/command.png" alt="command" width="21" height="21" />
     	</section>
     	<section id="lipsum_code" contenteditable="true"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ultricies dui in eros imperdiet faucibus a et tellus. Praesent elit eros, ornare vel vestibulum id, tristique in orci. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed tempor consectetur tortor, sed pharetra est aliquam quis. Donec sem sapien, varius at pharetra vel, adipiscing non turpis. Duis elementum, ipsum eu porta laoreet, nisi ipsum tempus risus, eu varius augue nisl in libero. Duis eget nulla id augue consectetur congue. Quisque lacinia tortor eu libero fermentum viverra. Morbi risus justo, dapibus ac sollicitudin eget, interdum blandit risus.</p>
 
 <p>Sed aliquet velit sed nunc mollis vitae hendrerit ipsum eleifend. Quisque convallis nisi quis lorem elementum condimentum. Donec at nunc massa, nec tincidunt dui. Donec suscipit rutrum nulla sit amet ornare. Integer faucibus ultricies elit sit amet tristique. Mauris est turpis, viverra vel lobortis eget, bibendum sed ipsum. Donec iaculis blandit libero, vitae feugiat neque cursus vel. Cras ut magna id purus fermentum imperdiet. Nunc malesuada, turpis non iaculis iaculis, sem urna accumsan turpis, ut placerat nibh neque sed nulla. Proin quam ante, iaculis tristique laoreet et, aliquet ut nibh. Quisque ultricies sollicitudin nibh sit amet pellentesque.</p></section>
-    	
-    	<section id="TEMPcontrols">
-    		<a href="" data-theme="ipsum">ipsum</a>
-    		<a href="" data-theme="macipsum">macipsum</a>
-    	</section>
     </form>
     <footer>
-    	<img src="img/placeholders/footer.png" alt="footer" width="855" height="117" />
+    	<ul>
+    		<li><a href="" data-theme="ipsum"><img src="img/dock/apple.png" alt="apple" width="48" height="59" /></a></li>
+    		<li><a href="" data-theme="macipsum" class="current"><img src="img/dock/apple.png" alt="apple" width="48" height="59" /></a></li>
+    	</ul>
     </footer>
   </div> <!--! end of #container -->
   

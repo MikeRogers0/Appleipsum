@@ -8,7 +8,7 @@ $(function(){
 	var lipsum_code = $('#lipsum_code');
 	var full_lipsum = $('#full_lipsum p');
 	var controls = $('#controls a');
-	var theme_changer = $('#TEMPcontrols a');
+	var theme_changer = $('a[data-theme]');
 	
 	// The clipboard stuff is a pain, so I used http://code.google.com/p/zeroclipboard/
 	var clipboard_data = null;
