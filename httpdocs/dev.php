@@ -47,8 +47,8 @@
     </form>
     <footer>
     	<ul>
-    		<li><a href="" data-theme="ipsum"><img src="img/dock/apple.png" alt="apple" width="48" height="59" /></a></li>
-    		<li><a href="" data-theme="macipsum" class="current"><img src="img/dock/apple.png" alt="apple" width="48" height="59" /></a></li>
+    		<li class="current"><a href="" data-theme="ipsum"><img src="img/dock/apple.png" alt="apple" width="48" height="59" /></a></li>
+    		<li><a href="" data-theme="macipsum"><img src="img/dock/rainbow_apple.png" alt="apple" width="48" height="59" /></a></li>
     	</ul>
     </footer>
   </div> <!--! end of #container -->

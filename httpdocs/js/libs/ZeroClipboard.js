@@ -288,6 +288,7 @@ ZeroClipboard.Client.prototype = {
 				break;
 		} // switch eventName
 		
+		
 		if (this.handlers[eventName]) {
 			for (var idx = 0, len = this.handlers[eventName].length; idx < len; idx++) {
 				var func = this.handlers[eventName][idx];
