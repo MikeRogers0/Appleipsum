@@ -37,18 +37,29 @@
     	</div>
     	</section>
     	<section id="controls">
-    		<a href="#html" data-type="html" id="copy_html" class="button">Copy HTML</a>
-    		<a href="#text" data-type="text" id="copy_text" class="button">Copy Text</a>
+    		<a href="#html" data-type="html" id="copy_html" class="button" data-reset="Copy HTML">Copy HTML</a>
+    		<a href="#text" data-type="text" id="copy_text" class="button" data-reset="Copy Text">Copy Text</a>
     		<img src="/img/command.png" alt="command" width="21" height="21" />
+    	</section>
+    	<section id="lipsum_type">
+    		<a href="#html" data-type="html" id="copy_html" class="switch current" data-reset="Copy HTML">Quotes</a>
+    		<a href="#text" data-type="text" id="copy_text" class="switch" data-reset="Copy Text">Keynotes</a>
     	</section>
     	<section id="lipsum_code" contenteditable="true"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ultricies dui in eros imperdiet faucibus a et tellus. Praesent elit eros, ornare vel vestibulum id, tristique in orci. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed tempor consectetur tortor, sed pharetra est aliquam quis. Donec sem sapien, varius at pharetra vel, adipiscing non turpis. Duis elementum, ipsum eu porta laoreet, nisi ipsum tempus risus, eu varius augue nisl in libero. Duis eget nulla id augue consectetur congue. Quisque lacinia tortor eu libero fermentum viverra. Morbi risus justo, dapibus ac sollicitudin eget, interdum blandit risus.</p>
 
 <p>Sed aliquet velit sed nunc mollis vitae hendrerit ipsum eleifend. Quisque convallis nisi quis lorem elementum condimentum. Donec at nunc massa, nec tincidunt dui. Donec suscipit rutrum nulla sit amet ornare. Integer faucibus ultricies elit sit amet tristique. Mauris est turpis, viverra vel lobortis eget, bibendum sed ipsum. Donec iaculis blandit libero, vitae feugiat neque cursus vel. Cras ut magna id purus fermentum imperdiet. Nunc malesuada, turpis non iaculis iaculis, sem urna accumsan turpis, ut placerat nibh neque sed nulla. Proin quam ante, iaculis tristique laoreet et, aliquet ut nibh. Quisque ultricies sollicitudin nibh sit amet pellentesque.</p></section>
     </form>
     <footer>
-    	<ul>
-    		<li class="current"><a href="" data-theme="ipsum"><img src="img/dock/apple.png" alt="apple" width="48" height="59" /></a></li>
-    		<li><a href="" data-theme="macipsum"><img src="img/dock/rainbow_apple.png" alt="apple" width="48" height="59" /></a></li>
+    	<ul id="dock">
+	    	<li><a href="" data-theme="ipsum"><span>Home</span><img src="img/dock/apple.png" alt="apple" width="48" height="59" /></a></li>
+	    	<li><a href="" data-theme="macipsum"><span>Home</span><img src="img/dock/rainbow_apple.png" alt="apple" width="48" height="59" /></a></li>
+	    	<li><a href="" data-theme="keynote"><span>Home</span><img src="img/dock/keynote.png" alt="apple" width="48" height="59" /></a></li>
+	    	<li><a href="" data-theme="finder"><span>Home</span><img src="img/dock/finder.png" alt="apple" width="48" height="59" /></a></li>
+	    	<li class="seperator"><!----></li>
+	    	<li><a href=""><span>Home</span><img src="img/dock/twitter.png" alt="apple" width="48" height="59" /></a></li>
+	    	<li><a href=""><span>Home</span><img src="img/dock/facebook.png" alt="apple" width="48" height="59" /></a></li>
+	    	<li><a href=""><span>Home</span><img src="img/dock/gplus.png" alt="apple" width="48" height="59" /></a></li>
+	    	<li><a href=""><span>Home</span><img src="img/dock/github.png" alt="apple" width="48" height="59" /></a></li>
     	</ul>
     </footer>
   </div> <!--! end of #container -->
@@ -63,8 +74,9 @@
   <script>window.jQuery || document.write('<script src="/js/libs/jquery-1.6.2.min.js"><\/script>')</script>
   
   <script src="/js/libs/ZeroClipboard.js"></script>
-  <script defer src="/js/libs/jquery.uniform.min.js"></script>
-  <script defer src="/js/script.js"></script>
+  <script src="/js/libs/jquery.uniform.min.js"></script>
+  <script src="/js/script.js"></script>
+  
 
   <!--[if lt IE 7 ]>
     <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>

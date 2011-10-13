@@ -30,7 +30,7 @@ $(function(){
 			} else {
 				client.elm.text('Copied Text!');
 			}
-			setTimeout(function(){controls.trigger('reset');},2000);
+			setTimeout(function(){client.elm.trigger('reset');},2000);
 		});
 	});
 	
@@ -38,11 +38,25 @@ $(function(){
 	
 	// Add functions for page.
 	function update_lipsum(){
-		lipsum_code.animate({height: (parseInt(lipsum_levels.val()) + 1) * 122+'px'});
-		lipsum_code.html(''); // Clear the old lipsum text.
-		for(var i=0;i<=lipsum_levels.val();i++){
-			lipsum_code.append(full_lipsum[i]);
+		var lipsum_levels_var = parseInt($('#lipsum_levels select').val()) + 1;
+		var full_lipsum = $('#full_lipsum p');
+		
+		if($('#lipsum_code p').length == lipsum_levels_var){
+			return true;
 		}
+		if($('#lipsum_code p').length > lipsum_levels_var){
+			$('#lipsum_code p:last').slideUp(300, function(){$(this).remove(); return update_lipsum();});
+			return true;
+		}
+		if($('#lipsum_code p').length < lipsum_levels_var){
+			lipsum_code.append('<p style="display:none;">'+$('#full_lipsum p:nth-child('+($('#lipsum_code p').length)+')').text()+'</p>');
+			$('#lipsum_code p:last').slideDown(300, function(){
+				return update_lipsum();
+			});
+			return true;
+		}
+		
+		return false;
 	}
 	
 	function change_theme(){
@@ -62,5 +76,66 @@ $(function(){
 	// Add listners
 	lipsum_levels.bind('change', update_lipsum);
 	theme_changer.bind('click', change_theme);
-	controls.bind('reset',function(){$(this).text('Reset …');});
+	controls.bind('reset',function(){$(this).text($(this).attr('data-reset'));});
+	
+	// Set up the dock
+	//library
+	function distance(x0, y0, x1, y1) {
+		var xDiff = x1-x0;
+		var yDiff = y1-y0;
+		
+		return Math.sqrt(xDiff*xDiff + yDiff*yDiff);
+	}
+	
+	var proximity = 180;
+	var iconSmall = 56, iconLarge =96; //css also needs changing to compensate with size
+	var iconDiff = (iconLarge - iconSmall);
+	var mouseX, mouseY;
+	var dock = $("#dock");
+	var animating = false, redrawReady = false;
+	
+	//below are methods for maintaining a constant 60fps redraw for the dock without flushing
+	$(document).bind("mousemove", function(e) {
+		if (dock.is(":visible")) {
+			mouseX = e.pageX;
+			mouseY = e.pageY;
+		
+			redrawReady = true;
+			registerConstantCheck();
+		}
+	});
+	
+	function registerConstantCheck() {
+		if (!animating) {
+			animating = true;
+			
+			window.setTimeout(callCheck, 15);
+		}
+	}
+	
+	function callCheck() {
+		sizeDockIcons();
+		
+		animating = false;
+	
+		if (redrawReady) {
+			redrawReady = false;
+			registerConstantCheck();
+		}
+	}
+	
+	//do the maths and resize each icon
+	function sizeDockIcons() {
+		dock.find("li").each(function() {
+			//find the distance from the center of each icon
+			var centerX = $(this).offset().left + ($(this).outerWidth()/2.0);
+			var centerY = $(this).offset().top + ($(this).outerHeight()/2.0);
+			
+			var dist = distance(centerX, centerY, mouseX, mouseY);
+			
+			//determine the new sizes of the icons from the mouse distance from their centres
+			var newSize =  (1 - Math.min(1, Math.max(0, dist/proximity))) * iconDiff + iconSmall;
+			$(this).find("a").css({width: newSize});
+		});
+	}
 });
