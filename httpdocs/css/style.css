@@ -103,7 +103,7 @@ h2{
 	background: url(../img/content_header.png) no-repeat left top, url(../img/content_main.png) repeat-y left top, -ms-linear-gradient(top, rgba(255,255,255, 0.01) 5%, rgba(255,255,255, 1) 85%);
 }
 
-#main section{
+section{
 	width: 720px;
 	margin: 0 auto;
 	font-family: "Myriad Pro", Helvetica, sans-serif;
