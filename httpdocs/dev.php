@@ -16,18 +16,17 @@
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/uniform.default.css">
 
-  <script src="/js/libs/modernizr-2.0.6.min.js"></script>
+  <!--<script src="/js/libs/modernizr-2.0.6.min.js"></script>-->
 </head>
 
 <body>
 
-  <div id="container">
+  
     <header class="ipsum">
     	<h1>iPsum</h1>
-    	<h2>Introducing Apple iPsum - It's the moust amazing placeholder text yet.</h2>
     </header>
     <form id="main" role="main">
-    	<section id="switcher"><img src="img/placeholders/how_much_genius_do_you_want.png" alt="how_much_genius_do_you_want" width="462" height="34" /> 
+    	<section id="switcher">How much genius do you want? 
     	<div id="lipsum_levels">
 	    	<select name="lipsum_levels">
 	    		<option value="0">1 Paragraph</option>
@@ -50,18 +49,17 @@
     </form>
     <footer>
     	<ul id="dock">
-	    	<li><a href="" data-theme="ipsum"><span>Home</span><img src="img/dock/apple.png" alt="apple" width="48" height="59" /></a></li>
-	    	<li><a href="" data-theme="macipsum"><span>Home</span><img src="img/dock/rainbow_apple.png" alt="apple" width="48" height="59" /></a></li>
-	    	<li><a href="" data-theme="keynote"><span>Home</span><img src="img/dock/keynote.png" alt="apple" width="48" height="59" /></a></li>
-	    	<li><a href="" data-theme="finder"><span>Home</span><img src="img/dock/finder.png" alt="apple" width="48" height="59" /></a></li>
+	    	<li><a href="" data-theme="ipsum"><span>iPsum</span><img src="img/dock/apple.png" alt="apple" width="48" height="59" /></a></li>
+	    	<li><a href="" data-theme="macipsum"><span>Macipsum</span><img src="img/dock/rainbow_apple.png" alt="apple" width="48" height="59" /></a></li>
+	    	<li><a href="" data-theme="jobs"><span>Keynote</span><img src="img/dock/keynote.png" alt="apple" width="48" height="59" /></a></li>
+	    	<li><a href="" data-theme="finder"><span>Finder</span><img src="img/dock/finder.png" alt="apple" width="48" height="59" /></a></li>
 	    	<li class="seperator"><!----></li>
-	    	<li><a href=""><span>Home</span><img src="img/dock/twitter.png" alt="apple" width="48" height="59" /></a></li>
-	    	<li><a href=""><span>Home</span><img src="img/dock/facebook.png" alt="apple" width="48" height="59" /></a></li>
-	    	<li><a href=""><span>Home</span><img src="img/dock/gplus.png" alt="apple" width="48" height="59" /></a></li>
-	    	<li><a href=""><span>Home</span><img src="img/dock/github.png" alt="apple" width="48" height="59" /></a></li>
+	    	<li><a href="https://github.com/Rogem002/Appleipsum"><span>Twitter</span><img src="img/dock/twitter.png" alt="apple" width="48" height="59" /></a></li>
+	    	<li><a href=""><span>Facebook</span><img src="img/dock/facebook.png" alt="apple" width="48" height="59" /></a></li>
+	    	<li><a href=""><span>Google+</span><img src="img/dock/gplus.png" alt="apple" width="48" height="59" /></a></li>
+	    	<li><a href=""><span>GitHub</span><img src="img/dock/github.png" alt="apple" width="48" height="59" /></a></li>
     	</ul>
     </footer>
-  </div> <!--! end of #container -->
   
   <div id="full_lipsum" class="hidden">
 <p>You know, it was just a year ago that I was up here and announced that we were going to switch to Intel processors. A huge, heart transplant to Intel microprocessors. And I said that we would do it over the coming 12 months. We did it in seven months, and it was the -- it's been the smoothest and most successful transition that we've ever seen in the history of our industry. And it was because we made a beautiful, seamless version of OSX for Intel processors. And our team created Rosetta software which lets you run PowerPC apps on top of OSX on Intel processors. Our hardware team got to cranking out a new Mac with Intel processors every month, and we completed this transition in seven months. But we didn't do this alone. We did this with the help of a lot of folks. Our new colleagues at Intel really helped us. Thank you very much. Our third-party developers rapidly moving their apps to universal versions to run at native speeds on Intel processors. Thank you very much. And most of all, our users. The minute you saw these lightning-fast machines, you bought 'em. And we've had an extremely successful year, and I want to thank our users very much.</p>
@@ -79,6 +77,9 @@
 <p>Isn't this awesome. And so I've got voice mail how I want to listen to it, when I want to listen to it, in any order I want to listen to it with visual voice mail. So that is a quick tour of the phone app.Now what I want to do is show you SMS texting. So I just go to that SMS icon in the upper-left-hand corner and push it. And I not only have SMS texting, but I have multiple sessions. So I can be carrying on conversations with people, and every time I get messages from them, I can be alerted to that, and go check it out. As an example here, I've got Eddie Q and I've been carrying on a conversation with Eddie, and I just tap this, and here's the conversation I've been carrying on right here. And if there's a new message it will tell me. And so there's a new message from Phil, and let's see the conversation was what.</p>
 <p>And I've got this little keyboard which was phenomenal. It does error prevention and correction. Not that I won't make some, I probably will. But it's actually really fast to type on. It's faster than all these little plastic keyboards on all these smart phones. So I can just say sounds great, see you there. And I can send that. And there it is. It's that simple. And when Phil messages me back, I'll be alerted, I'll see the dot, and I can just go pick up that conversation where it left off. If I want to send a message to Eddie or Scott, I just push this and send a message and go. It's so simple. So that's SMS messaging, and again, you've seen the keyboard, it's pretty awesome. We'll come back to that a little later.</p>
 <p>Get a call, again, just really great call management features, just scroll through contacts with your finger. All the information at your fingertips here. Favorites, last century, visual voice mail. Calendar, SMS texting, incredible photo app, the ability to just take any picture and make it your wallpaper. It's pretty unbelievable, and I think when you have a chance to get your hand on it, you'll agree, we have reinvented the phone. OK.</p>
+  </div>
+  <div class="hidden">
+	<img src="img/headers/header.sprite.png" alt="header.sprite" width="2625" height="254" />
   </div>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="/js/libs/jquery-1.6.2.min.js"><\/script>')</script>

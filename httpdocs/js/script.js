@@ -138,4 +138,10 @@ $(function(){
 			$(this).find("a").css({width: newSize});
 		});
 	}
+	
+	$('html').removeClass('no-js').addClass('has-js');
+	
+	$(document).ready(function(){
+		$('h1,#dock').fadeIn(700);
+	});
 });

@@ -11,9 +11,6 @@ html { font-size: 100%; overflow-y: scroll; -webkit-text-size-adjust: 100%; -ms-
 body { margin: 0; font-size: 13px; line-height: 1.231; }
 body, button, input, select, textarea { font-family: sans-serif; color: #222; }
 
-::-moz-selection { background: #fe57a1; color: #fff; text-shadow: none; }
-::selection { background: #fe57a1; color: #fff; text-shadow: none; }
-
 a { color: #00e; }
 a:visited { color: #551a8b; }
 a:hover { color: #06e; }
@@ -67,64 +64,59 @@ td { vertical-align: top; }
    ========================================================================== */
    
 /* Layout */
-   
-#container, footer{
-	width: 930px;
-	margin: 0 auto;
-	background: #f3f3f3;
+
+html{
+	background: #fbfbfb;
 }
 
 header{
-	height: 170px; 
+	height: 254px;
 	background: #fff;
-	padding-top: 20px;
 }
-h1, h2{
+h1{
 	text-indent: -9999px;
-	float:left;
-	background: no-repeat left top;
-	width: 425px;
-	height:90px;
+	width:	905px;
+	height:	254px;
+	background: url(../img/headers/header.sprite.png) no-repeat 0 0;
+	margin: 0 auto 0 auto;
 }
 h2{
 	float:right;
 	width: 370px;
-	height:112px;
-}
-.ipsum h1{
-	background-image: url(../img/logos/ipsum.png);
-	
-}
-.ipsum h2{
-	background-image: url(../img/usp/introducing_apple_ipsum.png);
-	
 }
 .macipsum h1{
-	background-image: url(../img/logos/macipsum.png);
+	background-position:	-905px 0;
 }
-.macipsum h2{
-	background-image: url(../img/usp/think_placeholder_text.png);
+.jobs h1{
+	background-position:	-1810px 0;
 }
+
 #main{
-	padding: 40px 0;
+	padding: 40px 0 125px 0;
+	width: 930px;
+	margin: 0 auto;
 	box-shadow: inset 0 0 5px #fff;
 	background: url(../img/content_header.png) no-repeat left top, url(../img/content_main.png) repeat-y left top, linear-gradient(top, rgba(255,255,255, 0.01) 5%, rgba(255,255,255, 1) 85%);
 	background: url(../img/content_header.png) no-repeat left top, url(../img/content_main.png) repeat-y left top, -o-linear-gradient(top, rgba(255,255,255, 0.01) 5%, rgba(255,255,255, 1) 85%);
 	background: url(../img/content_header.png) no-repeat left top, url(../img/content_main.png) repeat-y left top, -moz-linear-gradient(top, rgba(255,255,255, 0.01) 5%, rgba(255,255,255, 1) 85%);
 	background: url(../img/content_header.png) no-repeat left top, url(../img/content_main.png) repeat-y left top, -webkit-linear-gradient(top, rgba(255,255,255, 0.01) 5%, rgba(255,255,255, 1) 85%);
 	background: url(../img/content_header.png) no-repeat left top, url(../img/content_main.png) repeat-y left top, -ms-linear-gradient(top, rgba(255,255,255, 0.01) 5%, rgba(255,255,255, 1) 85%);
-	
-	margin-bottom: 110px;
 }
 
 section{
 	width: 720px;
 	margin: 0 auto;
+	font-family: "Myriad Pro", Helvetica, sans-serif;
+}
+
+#switcher{
+	font-size: 36px;
+	color: #989898;
 }
 
 #lipsum_levels{
 	float:right;
-	margin-top: 3px;
+	margin-top: -3px;
 }
 
 #lipsum_code{
@@ -148,7 +140,7 @@ section{
 	margin: 10px 0 0 20px;
 }
 #controls img{
-	margin-top:20px;
+	margin-top:18px;
 }
 #lipsum_type{
 	text-align: center;
@@ -160,6 +152,7 @@ footer{
 	text-align: center;
 	position: fixed;
 	bottom: 0;
+	width: 100%;
 }
 
 /* Lots of the dock is based on http://www.aplweb.co.uk/blog/js/mac-like-icon-dock-v3/demo.html */
@@ -204,7 +197,7 @@ footer{
 }
 
 #dock li a {
-	height: 148px;
+	height: 115px;
 	width: 48px;
 	display: inline-block;
 	text-align: center;
@@ -234,15 +227,12 @@ body.no_js #dock li a:hover {
 	font-weight: bold;
 	font-size: 80%;
 	padding: 4px 12px;
-	background-color: #EEE;
-	
-	opacity: 0.4;
-	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
-	
+	background-color: #000;
+	color: #fff;
+	opacity: 0.75;
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=75)";
 	margin: 0px auto;
-	
 	top: -40px;
-	
 	border-radius: 10px;
 }
 
@@ -259,7 +249,6 @@ body.no_js #dock li a:hover {
 	text-align: center;
 	border: 0px none;
 	margin-bottom: 15px;
-	
 	box-reflect: below 1px gradient(linear, left top, left bottom, from(transparent), color-stop(0.5, transparent), to(rgba(255,255,255,0.1)));
 	-webkit-box-reflect: below 1px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0.5, transparent), to(rgba(255,255,255,0.1)));
 	-moz-box-reflect: below 1px -moz-gradient(linear, left top, left bottom, from(transparent), color-stop(0.5, transparent), to(rgba(255,255,255,0.1)));
@@ -293,6 +282,10 @@ a.button.hover{
 	opacity: 0.75;
 }
 
+/* JS Stuff */
+.has-js h1, .has-js #dock{
+	display: none;
+}
 
 /* ==|== non-semantic helper classes ======================================== */
 .ir { display: block; border: 0; text-indent: -999em; overflow: hidden; background-color: transparent; background-repeat: no-repeat; text-align: left; direction: ltr; }
