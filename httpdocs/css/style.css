@@ -103,7 +103,7 @@ h2{
 	background: url(../img/content_header.png) no-repeat left top, url(../img/content_main.png) repeat-y left top, -ms-linear-gradient(top, rgba(255,255,255, 0.01) 5%, rgba(255,255,255, 1) 85%);
 }
 
-section{
+#main section{
 	width: 720px;
 	margin: 0 auto;
 	font-family: "Myriad Pro", Helvetica, sans-serif;
@@ -252,6 +252,19 @@ body.no_js #dock li a:hover {
 	box-reflect: below 1px gradient(linear, left top, left bottom, from(transparent), color-stop(0.5, transparent), to(rgba(255,255,255,0.1)));
 	-webkit-box-reflect: below 1px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0.5, transparent), to(rgba(255,255,255,0.1)));
 	-moz-box-reflect: below 1px -moz-gradient(linear, left top, left bottom, from(transparent), color-stop(0.5, transparent), to(rgba(255,255,255,0.1)));
+}
+
+/* about appleipsum */
+#about_appleipsum{
+	background: url(../img/about_appleipsum.png) no-repeat 0 0;
+	width: 331px;
+	height: 228px;
+	position: absolute;
+	top: 50%;
+	left: 60%;
+	padding: 30px 20px 20px 20px;
+	color: #b4b4b4;
+	display: none;
 }
 
 

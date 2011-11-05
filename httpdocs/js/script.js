@@ -67,15 +67,26 @@ $(function(){
 
 		$('h1, h2').fadeOut(400, function(){
 			$('header').attr('class', new_theme);
-			$('h1, h2').fadeIn(700);
+			$('h1').fadeIn(700);
 			parent_li.addClass('current');
 		});
+		return false;
+	}
+	
+	function info_box_control(){
+		var info_box_ds = $($(this).attr('data-show'));
+		if(info_box_ds.is(":visible") === false){
+			$(info_box_ds).fadeIn();
+			return false;
+		}
+		info_box_ds.hide();
 		return false;
 	}
 	
 	// Add listners
 	lipsum_levels.bind('change', update_lipsum);
 	theme_changer.bind('click', change_theme);
+	$('a[data-show]').bind('click', info_box_control);
 	controls.bind('reset',function(){$(this).text($(this).attr('data-reset'));});
 	
 	// Set up the dock
@@ -144,4 +155,8 @@ $(function(){
 	$(document).ready(function(){
 		$('h1,#dock').fadeIn(700);
 	});
+	
+	$("#about_appleipsum").draggable({  
+        scroll: false  
+	 })  
 });

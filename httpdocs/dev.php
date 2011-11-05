@@ -52,7 +52,7 @@
 	    	<li><a href="" data-theme="ipsum"><span>iPsum</span><img src="img/dock/apple.png" alt="apple" width="48" height="59" /></a></li>
 	    	<li><a href="" data-theme="macipsum"><span>Macipsum</span><img src="img/dock/rainbow_apple.png" alt="apple" width="48" height="59" /></a></li>
 	    	<li><a href="" data-theme="jobs"><span>Keynote</span><img src="img/dock/keynote.png" alt="apple" width="48" height="59" /></a></li>
-	    	<li><a href="" data-theme="finder"><span>Finder</span><img src="img/dock/finder.png" alt="apple" width="48" height="59" /></a></li>
+	    	<li><a href="" data-show="#about_appleipsum"><span>Finder</span><img src="img/dock/finder.png" alt="apple" width="48" height="59" /></a></li>
 	    	<li class="seperator"><!----></li>
 	    	<li><a href="https://github.com/Rogem002/Appleipsum"><span>Twitter</span><img src="img/dock/twitter.png" alt="apple" width="48" height="59" /></a></li>
 	    	<li><a href=""><span>Facebook</span><img src="img/dock/facebook.png" alt="apple" width="48" height="59" /></a></li>
@@ -61,6 +61,17 @@
     	</ul>
     </footer>
   
+  <section id="about_appleipsum">
+  	<p>Made on a Mac.</p>
+
+	<p>Developed by  <a href="">Fullondesign</a> and <a href="">Techpaste</a><br />
+	Designed by <a href="">CrystalRose</a></p>
+	
+	<p>Inspired by Steve Jobs, <br />
+	Bacon, Veggies, and Samuel L. Ipsum</p>
+	
+	<p>Some disclaimer about the copyright crap. We’re reliable but we’re not liable.</p>
+  </section>
   <div id="full_lipsum" class="hidden">
 <p>You know, it was just a year ago that I was up here and announced that we were going to switch to Intel processors. A huge, heart transplant to Intel microprocessors. And I said that we would do it over the coming 12 months. We did it in seven months, and it was the -- it's been the smoothest and most successful transition that we've ever seen in the history of our industry. And it was because we made a beautiful, seamless version of OSX for Intel processors. And our team created Rosetta software which lets you run PowerPC apps on top of OSX on Intel processors. Our hardware team got to cranking out a new Mac with Intel processors every month, and we completed this transition in seven months. But we didn't do this alone. We did this with the help of a lot of folks. Our new colleagues at Intel really helped us. Thank you very much. Our third-party developers rapidly moving their apps to universal versions to run at native speeds on Intel processors. Thank you very much. And most of all, our users. The minute you saw these lightning-fast machines, you bought 'em. And we've had an extremely successful year, and I want to thank our users very much.</p>
 <p>Now, as many as you know, our retail stores have for a while been selling over half their Macs to people who have never owned a Mac before: switchers. Well, I'm pleased to report that now, in the U.S., Macs selling through all channels, over half of them are selling to people who have never owned a Mac before. It's not just limited to our retail stores anymore. Half the Macs we're selling in the U.S. We are picking up lots and lots of new members of the Mac family, and we couldn't be happier. As a matter of fact, here's one that might be coming on soon. Jim Allchin at Microsoft was quoted recently as saying if he didn't work for Microsoft, he would buy a Mac, and he's retiring soon, so I've alerted our Seattle stores to keep an eye out for him and give him really good service. You know, Vista's coming out, and you know our ads with the Mac guy and the PC guy, we made a little ad for Vista, and I'd love to show it to you now, if you'd like to see it.</p>
@@ -86,6 +97,7 @@
   
   <script src="/js/libs/ZeroClipboard.js"></script>
   <script src="/js/libs/jquery.uniform.min.js"></script>
+  <script src="/js/libs/jquery-ui-1.8.16.custom.min.js"></script>
   <script src="/js/script.js"></script>
   
 
