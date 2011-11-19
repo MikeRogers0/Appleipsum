@@ -1,0 +1,97 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Appleipsum</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/uniform.default.css">
+
+  <script src="/js/libs/modernizr-2.0.6.min.js"></script>
+</head>
+
+<body>
+    <header class="ipsum">
+    	<h1>iPsum</h1>
+    </header>
+    <form id="main" role="main">
+    	<section id="switcher"><span id="how_much_genius">How much genius do you want?</span>
+    	<div id="lipsum_levels">
+	    	<select name="lipsum_levels">
+	    		<option value="0">1 Paragraph</option>
+	    		<option value="1" selected>2 Paragraphs</option>
+	    		<option value="2">3 Paragraphs</option>
+	    	</select>
+    	</div>
+    	</section>
+    	<section id="controls">
+    		<a href="#html" data-type="html" id="copy_html" class="button" data-reset="Copy HTML">Copy HTML</a>
+    		<a href="#text" data-type="text" id="copy_text" class="button" data-reset="Copy Text">Copy Text</a>
+    		<img src="/img/command.png" alt="command" width="21" height="21" />
+    	</section>
+    	<section id="lipsum_type">
+    		<a href="#html" data-type="html" id="copy_html" class="switch current" data-reset="Copy HTML">Quotes</a>
+    		<a href="#text" data-type="text" id="copy_text" class="switch" data-reset="Copy Text">Keynotes</a>
+    	</section>
+    	<section id="lipsum_code" contenteditable="true"><p><!-- --></p><p><!-- --></p></section>
+    </form>
+    <footer>
+    	<ul id="dock">
+	    	<li><a href="" data-theme="ipsum"><span>iPsum</span><img src="img/dock/apple.png" alt="apple" width="48" height="59" /></a></li>
+	    	<li><a href="" data-theme="macipsum"><span>Macipsum</span><img src="img/dock/rainbow_apple.png" alt="apple" width="48" height="59" /></a></li>
+	    	<li><a href="" data-theme="jobs"><span>Keynote</span><img src="img/dock/keynote.png" alt="apple" width="48" height="59" /></a></li>
+	    	<li><a href="" data-show="#about_appleipsum"><span>Finder</span><img src="img/dock/finder.png" alt="apple" width="48" height="59" /></a></li>
+	    	<li class="seperator"><!----></li>
+	    	<li><a href="https://github.com/Rogem002/Appleipsum"><span>Twitter</span><img src="img/dock/twitter.png" alt="apple" width="48" height="59" /></a></li>
+	    	<li><a href=""><span>Facebook</span><img src="img/dock/facebook.png" alt="apple" width="48" height="59" /></a></li>
+	    	<li><a href=""><span>Google+</span><img src="img/dock/gplus.png" alt="apple" width="48" height="59" /></a></li>
+	    	<li><a href=""><span>GitHub</span><img src="img/dock/github.png" alt="apple" width="48" height="59" /></a></li>
+    	</ul>
+    </footer>
+  
+  <section id="about_appleipsum">
+  	<ul>
+  		<li class="osx-system-icon">Close</li>
+  		<li class="osx-system-icon">Minimise</li>
+  		<li class="osx-system-icon">Maxamise</li>
+  		<li class="osx-system-title">ABout Appleipsum</li>
+  	</ul>
+  	<p>Made on a Mac.</p>
+
+	<p>Developed by  <a href="">Fullondesign</a> and <a href="">Techpaste</a><br />
+	Designed by <a href="">CrystalRose</a></p>
+	
+	<p>Inspired by Steve Jobs, <br />
+	Bacon, Veggies, and Samuel L. Ipsum</p>
+	
+	<p>Some disclaimer about the copyright crap. We’re reliable but we’re not liable.</p>
+  </section>
+  <div class="hidden">
+	<img src="img/headers/header.sprite.png" alt="header.sprite" width="2625" height="254" />
+  </div>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="/js/libs/jquery-1.6.2.min.js"><\/script>')</script>
+  
+  <script src="/js/jquery.ipsum.js"></script>
+  <script src="/js/libs/ZeroClipboard.js"></script>
+  <script src="/js/libs/jquery.uniform.min.js"></script>
+  <script src="/js/libs/jquery-ui-1.8.16.custom.min.js"></script>
+  <script src="/js/script.js"></script>
+  
+
+  <!--[if lt IE 7 ]>
+    <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+    <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+  <![endif]-->
+  
+</body>
+</html>

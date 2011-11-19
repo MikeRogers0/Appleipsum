@@ -107,16 +107,19 @@ section{
 	width: 720px;
 	margin: 0 auto;
 	font-family: "Myriad Pro", Helvetica, sans-serif;
+	font-size: 12px;
 }
 
-#switcher{
+#how_much_genius{
 	font-size: 36px;
 	color: #989898;
+	float:left;
 }
 
 #lipsum_levels{
 	float:right;
-	margin-top: -3px;
+	margin-top:7px;
+	font-size: 12px;
 }
 
 #lipsum_code{
@@ -258,15 +261,25 @@ body.no_js #dock li a:hover {
 #about_appleipsum{
 	background: url(../img/about_appleipsum.png) no-repeat 0 0;
 	width: 331px;
-	height: 228px;
+	height: 248px;
 	position: absolute;
 	top: 50%;
 	left: 60%;
-	padding: 30px 20px 20px 20px;
+	padding: 0 20px 20px 20px;
 	color: #b4b4b4;
 	display: none;
 }
-
+#about_appleipsum ul{
+	display: block;
+	height: 30px;
+	width: 331px;
+	margin: 0 0 0 -3px;
+	padding: 0;
+	list-style: none;
+}
+#about_appleipsum li{
+	float: left;
+}
 
 /* Text Styling */
 a.button, a.switch{
@@ -296,7 +309,7 @@ a.button.hover{
 }
 
 /* JS Stuff */
-.has-js h1, .has-js #dock{
+.js h1, .js #dock, .js #main{
 	display: none;
 }
 

@@ -4,6 +4,8 @@
 $(function(){
 	// Set up page and declare variable were going to use often.
 	$('select').uniform();
+	$('#lipsum_code p').iPsum();
+	
 	var lipsum_levels = $('#lipsum_levels select');
 	var lipsum_code = $('#lipsum_code');
 	var full_lipsum = $('#full_lipsum p');
@@ -39,7 +41,6 @@ $(function(){
 	// Add functions for page.
 	function update_lipsum(){
 		var lipsum_levels_var = parseInt($('#lipsum_levels select').val()) + 1;
-		var full_lipsum = $('#full_lipsum p');
 		
 		if($('#lipsum_code p').length == lipsum_levels_var){
 			return true;
@@ -49,7 +50,7 @@ $(function(){
 			return true;
 		}
 		if($('#lipsum_code p').length < lipsum_levels_var){
-			lipsum_code.append('<p style="display:none;">'+$('#full_lipsum p:nth-child('+($('#lipsum_code p').length)+')').text()+'</p>');
+			lipsum_code.append('<p style="display:none;">'+$.fn.iPsum('getIpsumText', ($('#lipsum_code p').length))+'</p>');
 			$('#lipsum_code p:last').slideDown(300, function(){
 				return update_lipsum();
 			});
@@ -150,13 +151,13 @@ $(function(){
 		});
 	}
 	
-	$('html').removeClass('no-js').addClass('has-js');
-	
-	$(document).ready(function(){
-		$('h1,#dock').fadeIn(700);
-	});
-	
 	$("#about_appleipsum").draggable({  
-        scroll: false  
-	 })  
+        scroll: false,
+        handle: 'ul'
+	 });
+	 
+	 $(document).ready(function(){
+		$('#main').fadeIn(700);
+		$('h1,#dock').fadeIn(1000);
+	});
 });
