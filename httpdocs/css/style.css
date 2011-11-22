@@ -285,7 +285,7 @@ body.no_js #dock li a:hover {
 a.button, a.switch{
 	font-size: 15px;
 	color: #696969;
-	padding: 7px 20px;
+	padding: 9px 20px 5px 20px;
 	border-radius: 15px;
 	border: 1px solid #a5a5a5;
 	box-shadow: 0px 1px 4px rgba(000,000,000,0.3);
@@ -298,6 +298,14 @@ a.button, a.switch{
 	background: -moz-linear-gradient(top, rgb(248,248,248) 0%, rgb(223,223,223) 85%);
 	background: -webkit-linear-gradient(top, rgb(248,248,248) 0%, rgb(223,223,223) 85%);
 	background: -ms-linear-gradient(top, rgb(248,248,248) 0%, rgb(223,223,223) 85%);
+}
+a.button:hover, a.switch:hover{
+	background: #f8f8f8;
+	background: linear-gradient(bottom, rgb(248,248,248) 0%, rgb(223,223,223) 85%);
+	background: -o-linear-gradient(bottom, rgb(248,248,248) 0%, rgb(223,223,223) 85%);
+	background: -moz-linear-gradient(bottom, rgb(248,248,248) 0%, rgb(223,223,223) 85%);
+	background: -webkit-linear-gradient(bottom, rgb(248,248,248) 0%, rgb(223,223,223) 85%);
+	background: -ms-linear-gradient(bottom, rgb(248,248,248) 0%, rgb(223,223,223) 85%);
 }
 a.switch{
 	font-size: 12px;

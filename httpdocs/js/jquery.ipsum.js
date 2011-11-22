@@ -31,7 +31,10 @@ Enjoy!
                 });
             },
             apply: function(){
-            	return this.html($.fn.iPsum('getIpsumText'));
+            	if($(this).is("p")){
+            		return this.html($.fn.iPsum('getIpsumText'));
+            	}
+            	return this.html($.fn.iPsum('getIpsumQuote'));
             },
             // getIpsumText - Gets the nest ipsum text to add in "So were not seeing ipsum…ipsum…ipsum".
             getIpsumText: function(text_number){
@@ -48,8 +51,22 @@ Enjoy!
             	
             	settings.ipsumText_start = 0;
             	return settings.ipsumText[settings.ipsumText_start];
+            },
+            getIpsumQuote: function(text_number){
+            	var settings = $.fn.iPsum.settings;
+            	// If the user wants a specific text_number
+            	if(settings.ipsumQuotes[text_number]){
+            		return settings.ipsumQuotes[text_number];
+            	}
+            	
+            	settings.ipsumQuotes_start++;
+            	if(settings.ipsumQuotes[(settings.ipsumQuotes_start)]){
+            		return settings.ipsumQuotes[settings.ipsumQuotes_start];
+            	}
+            	
+            	settings.ipsumQuotes_start = 0;
+            	return settings.ipsumQuotes[settings.ipsumQuotes_start];
             }
-
         }
 
         if (methods[method]) {
@@ -80,7 +97,26 @@ Enjoy!
 			13: "And I've got this little keyboard which was phenomenal. It does error prevention and correction. Not that I won't make some, I probably will. But it's actually really fast to type on. It's faster than all these little plastic keyboards on all these smart phones. So I can just say sounds great, see you there. And I can send that. And there it is. It's that simple. And when Phil messages me back, I'll be alerted, I'll see the dot, and I can just go pick up that conversation where it left off. If I want to send a message to Eddie or Scott, I just push this and send a message and go. It's so simple. So that's SMS messaging, and again, you've seen the keyboard, it's pretty awesome. We'll come back to that a little later.",
 			14: "Get a call, again, just really great call management features, just scroll through contacts with your finger. All the information at your fingertips here. Favorites, last century, visual voice mail. Calendar, SMS texting, incredible photo app, the ability to just take any picture and make it your wallpaper. It's pretty unbelievable, and I think when you have a chance to get your hand on it, you'll agree, we have reinvented the phone. OK."
         },
-        ipsumText_start: -1
+        ipsumQuotes:{
+        	0: "When you're a carpenter making a beautiful chest of drawers, you're not going to use a piece of plywood on the back, even though it faces the wall and nobody will ever see it. You'll know it's there, so you're going to use a beautiful piece of wood on the back. For you to sleep well at night, the aesthetic, the quality, has to be carried all the way through.",
+        	1: "Remembering that I'll be dead soon is the most important tool I've ever encountered to help me make the big choices in life. Because almost everything - all external expectations, all pride, all fear of embarrassment or failure - these things just fall away in the face of death, leaving only what is truly important. Remembering that you are going to die is the best way I know to avoid the trap of thinking you have something to lose. You are already naked. There is no reason not to follow your heart.",
+        	2: "Innovation comes from people meeting up in the hallways or calling each other at 10.30 at night with a new idea, or because they realised something that shoots holes in how we've been thinking about a problem. It's ad hoc meetings of six people called by someone who thinks he has figured out the coolest new thing ever and who wants to know what other people think of his idea.",
+        	3: "The desktop computer industry is dead. Innovation has virtually ceased. Microsoft dominates with very little innovation. That's over. Apple lost. The desktop market has entered the dark ages, and it's going to be in the dark ages for the next 10 years, or certainly for the rest of this decade.",
+        	4: "The most compelling reason for most people to buy a computer for the home will be to link it to a nationwide communications network. We're just in the beginning stages of what will be a truly remarkable breakthrough for most people – as remarkable as the telephone.",
+        	5: "You can't connect the dots looking forward; you can only connect them looking backwards. So you have to trust that the dots will somehow connect in your future. You have to trust in something – your gut, destiny, life, karma, whatever. This approach has never let me down, and it has made all the difference in my life.",
+        	6: "Your work is going to fill a large part of your life, and the only way to be truly satisfied is to do what you believe is great work. And the only way to do great work is to love what you do. If you haven't found it yet, keep looking. Don't settle. As with all matters of the heart, you'll know when you find it. And, like any great relationship, it just gets better and better as the years roll on. So keep looking until you find it. Don't settle.",
+        	7: "My position coming back to Apple was that our industry was in a coma. It reminded me of Detroit in the 70s, when American cars were boats on wheels.",
+        	8: "In most people's vocabularies, design means veneer. It's interior decorating. It's the fabric of the curtains and the sofa. But to me, nothing could be further from the meaning of design. Design is the fundamental soul of a man-made creation that ends up expressing itself in successive outer layers of the product or service.",
+        	9: "Design is a funny word. Some people think design means how it looks. But of course, if you dig deeper, it's really how it works. The design of the Mac wasn't what it looked like, although that was part of it. Primarily, it was how it worked. To design something really well, you have to get it. You have to really grok what it's all about. It takes a passionate commitment to really thoroughly understand something, chew it up, not just quickly swallow it. Most people don't take the time to do that.",
+        	10: "So when these people sell out, even though they get fabulously rich, they're gypping themselves out of one of the potentially most rewarding experiences of their unfolding lives. Without it, they may never know their values or how to keep their newfound wealth in perspective.",
+        	11: "The problem with the internet start-up craze isn't that too many people are starting companies; it's that too many people aren't sticking with it. That's somewhat understandable, because there are many moments that are filled with despair and agony, when you have to fire people and cancel things and deal with very difficult situations. That's when you find out who you are and what your values are.",
+        	12: "That's been one of my mantras — focus and simplicity. Simple can be harder than complex: You have to work hard to get your thinking clean to make it simple. But it's worth it in the end because once you get there, you can move mountains.",
+        	13: "We think the Mac will sell zillions, but we didn't build the Mac for anybody else. We built it for ourselves. We were the group of people who were going to judge whether it was great or not. We weren't going to go out and do market research. We just wanted to build the best thing we could build.",
+        	14: "There's nothing that makes my day more than getting an e-mail from some random person in the universe who just bought an iPad over in the UK and tells me the story about how it's the coolest product they've ever brought home in their lives. That's what keeps me going. It's what kept me five years ago [when he was diagnosed with cancer], it's what kept me going 10 years ago when the doors were almost closed. And it's what will keep me going five years from now whatever happens.",
+        	15: "I don't think I've ever worked so hard on something, but working on Macintosh was the neatest experience of my life. Almost everyone who worked on it will say that. None of us wanted to release it at the end. It was as though we knew that once it was out of our hands, it wouldn't be ours any more."
+        },
+        ipsumText_start: -1,
+        ipsumQuotes_start: -1
     },
 
     $.fn.iPsum.settings = {}

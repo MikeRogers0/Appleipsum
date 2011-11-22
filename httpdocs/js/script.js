@@ -4,13 +4,14 @@
 $(function(){
 	// Set up page and declare variable were going to use often.
 	$('select').uniform();
-	$('#lipsum_code p').iPsum();
+	$('#lipsum_code p, #lipsum_code h3').iPsum(); // If it's a p, it will use a keynote. For h3, it will use quotes.
 	
 	var lipsum_levels = $('#lipsum_levels select');
 	var lipsum_code = $('#lipsum_code');
-	var full_lipsum = $('#full_lipsum p');
 	var controls = $('#controls a');
 	var theme_changer = $('a[data-theme]');
+	var ipsum_changer = $('a[data-ipsum]');
+	var ipsum_type = 'p';
 	
 	// The clipboard stuff is a pain, so I used http://code.google.com/p/zeroclipboard/
 	var clipboard_data = null;
@@ -42,16 +43,20 @@ $(function(){
 	function update_lipsum(){
 		var lipsum_levels_var = parseInt($('#lipsum_levels select').val()) + 1;
 		
-		if($('#lipsum_code p').length == lipsum_levels_var){
+		if($('#lipsum_code > *').length == lipsum_levels_var){
 			return true;
 		}
-		if($('#lipsum_code p').length > lipsum_levels_var){
-			$('#lipsum_code p:last').slideUp(300, function(){$(this).remove(); return update_lipsum();});
+		if($('#lipsum_code > *').length > lipsum_levels_var){
+			$('#lipsum_code > *:last').slideUp(300, function(){$(this).remove(); return update_lipsum();});
 			return true;
 		}
-		if($('#lipsum_code p').length < lipsum_levels_var){
-			lipsum_code.append('<p style="display:none;">'+$.fn.iPsum('getIpsumText', ($('#lipsum_code p').length))+'</p>');
-			$('#lipsum_code p:last').slideDown(300, function(){
+		if($('#lipsum_code > *').length < lipsum_levels_var){
+			if(ipsum_type == 'p'){
+				lipsum_code.append('<p style="display:none;">'+$.fn.iPsum('getIpsumText', ($('#lipsum_code > *').length))+'</p>');
+			}else{
+				lipsum_code.append('<h3 style="display:none;">'+$.fn.iPsum('getIpsumQuote', ($('#lipsum_code > *').length))+'</h3>');
+			}
+			$('#lipsum_code > *:last').slideDown(500, function(){
 				return update_lipsum();
 			});
 			return true;
@@ -84,10 +89,22 @@ $(function(){
 		return false;
 	}
 	
+	function swap_lipsum(){
+		ipsum_type = $(this).attr('data-ipsum');
+		
+		$('#lipsum_code > *').fadeOut(300, function(){
+			$('#lipsum_code').html(''); // Clear the html.
+			update_lipsum(); // Reset the ipsum
+		});
+		
+		return false;
+	}
+	
 	// Add listners
 	lipsum_levels.bind('change', update_lipsum);
 	theme_changer.bind('click', change_theme);
 	$('a[data-show]').bind('click', info_box_control);
+	ipsum_changer.bind('click', swap_lipsum);
 	controls.bind('reset',function(){$(this).text($(this).attr('data-reset'));});
 	
 	// Set up the dock
@@ -151,11 +168,13 @@ $(function(){
 		});
 	}
 	
+	// Make the about us box dragable
 	$("#about_appleipsum").draggable({  
         scroll: false,
         handle: 'ul'
 	 });
 	 
+	 // Fade in the document nicely.
 	 $(document).ready(function(){
 		$('#main').fadeIn(700);
 		$('h1,#dock').fadeIn(1000);
