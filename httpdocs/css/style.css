@@ -318,7 +318,7 @@ a.button.hover{
 
 /* JS Stuff */
 .js h1, .js #dock, .js #main{
-	display: none;
+	opacity:0.01;
 }
 
 /* ==|== non-semantic helper classes ======================================== */

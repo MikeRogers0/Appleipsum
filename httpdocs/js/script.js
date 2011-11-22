@@ -176,7 +176,7 @@ $(function(){
 	 
 	 // Fade in the document nicely.
 	 $(document).ready(function(){
-		$('#main').fadeIn(700);
-		$('h1,#dock').fadeIn(1000);
+		$('#main').animate({opacity: 1}, 700);
+		$('h1,#dock').animate({opacity: 1}, 1000);
 	});
 });
