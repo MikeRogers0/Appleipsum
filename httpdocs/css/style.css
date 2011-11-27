@@ -132,6 +132,11 @@ section{
 	overflow-y: scroll;
 }
 
+#lipsum_code h3{
+	font-weight: normal;
+	font-size: 1em;
+}
+
 #controls{
 	width: 700px;
 	margin:10px auto;
@@ -269,16 +274,13 @@ body.no_js #dock li a:hover {
 	color: #b4b4b4;
 	display: none;
 }
-#about_appleipsum ul{
-	display: block;
-	height: 30px;
+#about_appleipsum .handle{
+	float: left;
+	height: 40px;
 	width: 331px;
 	margin: 0 0 0 -3px;
 	padding: 0;
 	list-style: none;
-}
-#about_appleipsum li{
-	float: left;
 }
 
 /* Text Styling */

@@ -171,7 +171,7 @@ $(function(){
 	// Make the about us box dragable
 	$("#about_appleipsum").draggable({  
         scroll: false,
-        handle: 'ul'
+        handle: $('#about_appleipsum .handle')
 	 });
 	 
 	 // Fade in the document nicely.
