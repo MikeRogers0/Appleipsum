@@ -1,0 +1,86 @@
+section{
+	width: 720px;
+	margin: 0 auto;
+	font-size: 12px;
+  font-family: 'Lucida Grande', 'Lucida Sans Unicode', Helvetica, Arial, Verdana, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: rgb(102, 102, 102);
+}
+
+#switcher{
+  overflow:hidden;
+}
+
+#how_much_genius{
+	font-size: 32px;
+	color: #989898;
+	float:left;
+}
+
+#lipsum_levels{
+	float:right;
+	margin-top:7px;
+	font-size: 12px;
+}
+
+#lipsum_code{
+	width: 650px;
+	padding: 5px 25px;
+	margin: 0 auto 20px auto;
+	background: #fff;
+	border: 1px #e0e0e0 solid;
+	border-radius: 7px;
+	overflow: auto;
+  min-height: 300px;
+}
+
+#lipsum_code h3{
+	font-weight: normal;
+	font-size: 1em;
+}
+
+#controls{
+	width: 700px;
+	margin:10px auto;
+	overflow: hidden;
+	
+}
+#controls a, #controls img{
+	float: right;
+	margin: 10px 0 0 20px;
+}
+#controls img{
+	margin-top:17px;
+}
+#lipsum_type{
+	text-align: center;
+	margin: 25px auto -7px auto;
+}
+
+/* Text Styling */
+a.button, a.switch{
+	font-size: 15px;
+	color: #696969;
+  padding: 6px 20px 7px 20px;
+	border-radius: 15px;
+	border: 1px solid #a5a5a5;
+	box-shadow: 0px 1px 4px rgba(000,000,000,0.3);
+	text-shadow: 0px 1px 3px rgba(105,105,105,0.1);
+	text-decoration: none;
+	
+	background: #f8f8f8;
+	background: linear-gradient(to top, rgb(248,248,248) 0%, rgb(223,223,223) 85%);
+}
+a.button:hover, a.switch:hover{
+	background: #f8f8f8;
+	background: linear-gradient(to bottom, rgb(248,248,248) 0%, rgb(223,223,223) 85%);
+}
+a.switch{
+	font-size: 12px;
+	padding: 3px 7px;
+	border-radius: 3px;
+}
+a.button.hover{
+	opacity: 0.75;
+}
+

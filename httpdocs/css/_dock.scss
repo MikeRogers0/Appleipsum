@@ -1,4 +1,12 @@
 /* Lots of the dock is based on http://www.aplweb.co.uk/blog/js/mac-like-icon-dock-v3/demo.html */
+footer{
+	background:transparent;
+	text-align: center;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+}
+
 #dock{
 	background: url(../img/dock/gloss.png) repeat-x left 80%, url(../img/dock/mid.png) repeat-x left bottom;
 	margin: 0 auto;

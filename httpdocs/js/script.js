@@ -14,28 +14,28 @@ $(function(){
 	var ipsum_type = 'p';
 	
 	// The clipboard stuff is a pain, so I used http://code.google.com/p/zeroclipboard/
-	var clipboard_data = null;
+	//var clipboard_data = null;
 	
-	controls.each(function(){
-		var clip = new ZeroClipboard.Client();
-		clip.setHandCursor( true );
-		clip.glue($(this).attr('id'));
-		if($(this).attr('data-type') == 'html'){
-			clip.setText( lipsum_code.html());
-		}else{
-			clip.setText( lipsum_code.text());
-		}
-		clip.elm = $(this); // Add $(this) to the clip, so we can run on it.
+	//controls.each(function(){
+		//var clip = new ZeroClipboard.Client();
+		//clip.setHandCursor( true );
+		//clip.glue($(this).attr('id'));
+		//if($(this).attr('data-type') == 'html'){
+			//clip.setText( lipsum_code.html());
+		//}else{
+			//clip.setText( lipsum_code.text());
+		//}
+		//clip.elm = $(this); // Add $(this) to the clip, so we can run on it.
 		
-		clip.addEventListener( 'onComplete', function(client){
-			if(client.elm.attr('data-type') == "html"){
-				client.elm.text('Copied HTML!');
-			} else {
-				client.elm.text('Copied Text!');
-			}
-			setTimeout(function(){client.elm.trigger('reset');},2000);
-		});
-	});
+		//clip.addEventListener( 'onComplete', function(client){
+			//if(client.elm.attr('data-type') == "html"){
+				//client.elm.text('Copied HTML!');
+			//} else {
+				//client.elm.text('Copied Text!');
+			//}
+			//setTimeout(function(){client.elm.trigger('reset');},2000);
+		//});
+	//});
 	
 	
 	
