@@ -1,10 +1,21 @@
 header {
-  padding: 25px 0 0 0;
+  padding: 25px 0 25px 0;
 
   > div {
     display:block;
     margin: 0 auto;
-    width: 850px;
-    padding: 30px 0;
+  }
+
+  #slide-1{
+    background: url('../img/headers/ipsum.png') no-repeat; 
+    width: 841px;
+    height: 119px;
+    display:block;
+
+    @media screen and (max-width: 950px) {
+      width: 287px;
+      height: 88px;
+      background: url('../img/logos/ipsum.png') no-repeat; 
+    }
   }
 }

@@ -13,9 +13,7 @@
 
   <body>
     <header>
-      <div class="slide-1">
-        <img src="img/headers/ipsum.png" alt="iPsum - The most amazing placeholder text yet." />
-      </div>
+      <div id="slide-1"></div>
     </header>
 
     <div class="main">
@@ -26,17 +24,34 @@
         </ul>
       </nav>
 
-      <section class="ipsum-box" contenteditable="true">
-        <p>When you're a carpenter making a beautiful chest of drawers, you're not going to use a piece of plywood on the back, even though it faces the wall and nobody will ever see it. You'll know it's there, so you're going to use a beautiful piece of wood on the back. For you to sleep well at night, the aesthetic, the quality, has to be carried all the way through.</p>
-        <p>Remembering that I'll be dead soon is the most important tool I've ever encountered to help me make the big choices in life. Because almost everything - all external expectations, all pride, all fear of embarrassment or failure - these things just fall away in the face of death, leaving only what is truly important. Remembering that you are going to die is the best way I know to avoid the trap of thinking you have something to lose. You are already naked. There is no reason not to follow your heart.</p>
-        <p>Innovation comes from people meeting up in the hallways or calling each other at 10.30 at night with a new idea, or because they realised something that shoots holes in how we've been thinking about a problem. It's ad hoc meetings of six people called by someone who thinks he has figured out the coolest new thing ever and who wants to know what other people think of his idea.</p>
-        <p>The desktop computer industry is dead. Innovation has virtually ceased. Microsoft dominates with very little innovation. That's over. Apple lost. The desktop market has entered the dark ages, and it's going to be in the dark ages for the next 10 years, or certainly for the rest of this decade.</p>
-      </section>
+      <div id="ipsum-wrapper">
+        <section class="ipsum-box" contenteditable="true">
+          <div id="quotes" class="active">
+            <p>When you're a carpenter making a beautiful chest of drawers, you're not going to use a piece of plywood on the back, even though it faces the wall and nobody will ever see it. You'll know it's there, so you're going to use a beautiful piece of wood on the back. For you to sleep well at night, the aesthetic, the quality, has to be carried all the way through.</p>
+            <p>Remembering that I'll be dead soon is the most important tool I've ever encountered to help me make the big choices in life. Because almost everything - all external expectations, all pride, all fear of embarrassment or failure - these things just fall away in the face of death, leaving only what is truly important. Remembering that you are going to die is the best way I know to avoid the trap of thinking you have something to lose. You are already naked. There is no reason not to follow your heart.</p>
+            <p>Innovation comes from people meeting up in the hallways or calling each other at 10.30 at night with a new idea, or because they realised something that shoots holes in how we've been thinking about a problem. It's ad hoc meetings of six people called by someone who thinks he has figured out the coolest new thing ever and who wants to know what other people think of his idea.</p>
+            <p>The desktop computer industry is dead. Innovation has virtually ceased. Microsoft dominates with very little innovation. That's over. Apple lost. The desktop market has entered the dark ages, and it's going to be in the dark ages for the next 10 years, or certainly for the rest of this decade.</p>
+          </div>
+          <div id="keynotes">
+            <p>You know, it was just a year ago that I was up here and announced that we were going to switch to Intel processors. A huge, heart transplant to Intel microprocessors. And I said that we would do it over the coming 12 months. We did it in seven months, and it was the -- it's been the smoothest and most successful transition that we've ever seen in the history of our industry. And it was because we made a beautiful, seamless version of OSX for Intel processors. And our team created Rosetta software which lets you run PowerPC apps on top of OSX on Intel processors. Our hardware team got to cranking out a new Mac with Intel processors every month, and we completed this transition in seven months. But we didn't do this alone. We did this with the help of a lot of folks. Our new colleagues at Intel really helped us. Thank you very much. Our third-party developers rapidly moving their apps to universal versions to run at native speeds on Intel processors. Thank you very much. And most of all, our users. The minute you saw these lightning-fast machines, you bought 'em. And we've had an extremely successful year, and I want to thank our users very much.</p>
+            <p>Now, as many as you know, our retail stores have for a while been selling over half their Macs to people who have never owned a Mac before: switchers. Well, I'm pleased to report that now, in the U.S., Macs selling through all channels, over half of them are selling to people who have never owned a Mac before. It's not just limited to our retail stores anymore. Half the Macs we're selling in the U.S. We are picking up lots and lots of new members of the Mac family, and we couldn't be happier. As a matter of fact, here's one that might be coming on soon. Jim Allchin at Microsoft was quoted recently as saying if he didn't work for Microsoft, he would buy a Mac, and he's retiring soon, so I've alerted our Seattle stores to keep an eye out for him and give him really good service. You know, Vista's coming out, and you know our ads with the Mac guy and the PC guy, we made a little ad for Vista, and I'd love to show it to you now, if you'd like to see it.</p>
+            <p>So, 2007 is going to be a great year for the Mac. But this is all we're going to talk about the Mac today. We're going to move on to some other things and over the course of the next several months we're going to roll out some awesome stuff for the Mac. But for today, we're going to move on.</p>
+          </div>
+        </section>
+      </div>
+
+      <div id="controls">
+        <a id="select_all" href="#select_all">Select all</a>
+      </div>
     </div>
 
+
     <footer>
-      <p>Apple iPsum is the brainchild of 3 Apple enthusiasts <a href="https://twitter.com/CrystalRose">@CrystalRose</a>, <a href="https://twitter.com/Techpaste">@Techpaste</a> &amp; <a href="https://twitter.com/MikeRogers0">@MikeRogers0</a>. We gave up a little of our time to bring you the most awesome, genius &amp;  mindblowingly fantastic placeholder text generator.</p>
+      <p>Apple iPsum is the brainchild of 3 Apple enthusiasts <a href="https://twitter.com/CrystalRose" target="_blank">@CrystalRose</a>, <a href="https://twitter.com/Techpaste" target="_blank">@Techpaste</a> &amp; <a href="https://twitter.com/MikeRogers0" target="_blank">@MikeRogers0</a>. We gave up a little of our time to bring you the most awesome, genius &amp;  mindblowingly fantastic placeholder text generator.</p>
       <p>Apple iPsum was inspired by Cupcake Ipsum, Bacon Ipsum &amp; Samuel L'ipsum.</p>
     </footer>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="js/main.js" type="text/javascript"></script>
   </body>
 </html>

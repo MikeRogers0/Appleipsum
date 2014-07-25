@@ -1,18 +1,75 @@
-.main{
+.main {
   border-top: 1px solid #e2e2e2;
   border-bottom: 1px solid #e2e2e2;
   background: #f6f6f6;
   padding: 20px 0;
 }
 
-.ipsum-box{
+.ipsum-box {
   padding: 5px 20px;
-  border: 1px solid #ddd;
   background: #fff;
+  border: 1px solid #ddd;
   border-radius: 6px;
   width: 80%;
-  margin: 0 auto;
+  margin: 0 auto 20px auto;
 
   max-width: 850px;
   outline: none;
+}
+
+#ipsum-wrapper {
+  overflow: hidden;
+}
+
+#keynotes, #quotes {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+
+  display: none;
+  
+  &.active {
+    display: block;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+  -webkit-animation-name: fadeIn;
+}
+
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+}
+
+.fadeOut {
+  animation-name: fadeOut;
+  -webkit-animation-name: fadeOut;
 }
