@@ -51,4 +51,8 @@ $(document).ready(function(){
     e.preventDefault();
     selectText($('.ipsum-box .active').attr('id'));
   });
+
+  headers = ['ipsum', 'jobs', 'macipsum']
+  header = Math.floor(Math.random()*3)
+  $('#header').attr('class', headers[header]);
 });

@@ -1,21 +1,51 @@
 header {
   padding: 25px 0 25px 0;
 
+  &.jobs {
+    padding-bottom: 0;
+  }
+  &.macipsum {
+    padding-bottom: 5px;
+  }
+
   > div {
     display:block;
     margin: 0 auto;
   }
-
-  #slide-1{
-    background: url('../img/headers/ipsum.png') no-repeat; 
+  .slide {
     width: 841px;
     height: 119px;
     display:block;
+    background: no-repeat; 
 
     @media screen and (max-width: 950px) {
+      background-size: 100%;
       width: 287px;
       height: 88px;
-      background: url('../img/logos/ipsum.png') no-repeat; 
     }
+  }
+}
+
+.ipsum .slide {
+  background-image: url('../img/headers/ipsum.png'); 
+  @media screen and (max-width: 950px) {
+    background-image: url('../img/logos/ipsum.png'); 
+  }
+}
+
+.jobs .slide {
+  background-image: url('../img/headers/jobs.png'); 
+  height: 254px;
+  @media screen and (max-width: 950px) {
+    width: 374px;
+    height: 254px;
+    background-image: url('../img/logos/jobs.jpg'); 
+  }
+}
+
+.macipsum .slide {
+  background-image: url('../img/headers/macipsum.png'); 
+  @media screen and (max-width: 950px) {
+    background-image: url('../img/logos/macipsum.png'); 
   }
 }
