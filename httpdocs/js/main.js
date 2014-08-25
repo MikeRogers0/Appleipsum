@@ -82,36 +82,27 @@ function update_ipsum(element){
   }
 }
 
+function update_unactive_ipsum(){
+  $('.ipsum-wrapper').removeClass('transitioning');
+  setTimeout(function(){
+    if(!$('.ipsum-wrapper').hasClass('transitioning')){
+      update_ipsum($('#quotes:not(.active), #keynotes:not(.active)'));
+    }
+  }, 100);
+}
+
 $(document).ready(function(){
-  $('.tabs a').on('click', function(e){
-    e.preventDefault();
-    $('.tabs a').removeClass('active');
-    $(this).addClass('active');
-
-    localStorage['ipsum'] = $(this).text();
-
-    nextActive = $($(this).attr('href'));
-    currentActive = $('.ipsum-box .active');
-
-    $('.ipsum-wrapper').css('maxHeight', currentActive.height());
-
-    currentActive.removeClass('active');
-
-    nextActive.addClass('active');
-
-    $('#quotes').on('webkitTransitionEnd', function(){
-      update_ipsum(currentActive);
-      $('.ipsum-wrapper').css('maxHeight', nextActive.height());
-    });
-  });
-
-  update_ipsum($('#quotes'));
-  update_ipsum($('#keynotes'));
+  var wrapper = $('.ipsum-wrapper'), quotes_ipsum = $('#quotes'), keynotes_ipsum = $('#keynotes');
+  
+  update_ipsum(quotes_ipsum);
+  update_ipsum(keynotes_ipsum);
 
   if(localStorage['ipsum'] == 'Keynotes'){
     $('.tabs a, #quotes').removeClass('active');
     $('.tabs a:last, #keynotes').addClass('active');
   }
+
+  wrapper.css('maxHeight', $('.ipsum-box .active').height());
 
   $('#select_all').on('click', function(e){
     e.preventDefault();
@@ -121,4 +112,36 @@ $(document).ready(function(){
   headers = ['ipsum', 'jobs', 'macipsum'];
   header = Math.floor(Math.random()*3);
   $('#header').attr('class', headers[header]);
+  
+  $('.tabs a').on('click', function(e){
+    e.preventDefault();
+    wrapper.addClass('transitioning');
+    
+    // Update the tabs first
+    $('.tabs a').toggleClass('active');
+
+    localStorage['ipsum'] = $(this).text();
+
+    var nextActive = $($(this).attr('href'));
+    var currentActive = $('.ipsum-box .active');
+
+    // When the current quote is bigger then the other, make it adjust to the bigger height first.
+    if(currentActive.height() >= nextActive.height()){
+      quotes_ipsum.one('transitionend', function(){
+        wrapper.css('maxHeight', nextActive.height());
+        wrapper.one('transitionend', update_unactive_ipsum);
+      });
+
+      currentActive.removeClass('active');
+      nextActive.addClass('active');
+    } else {
+      wrapper.css('maxHeight', nextActive.height());
+      
+      wrapper.one('transitionend', function(){
+        quotes_ipsum.one('transitionend', update_unactive_ipsum);
+        currentActive.removeClass('active');
+        nextActive.addClass('active');
+      });
+    }
+  });
 });
