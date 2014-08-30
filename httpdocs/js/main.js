@@ -14,6 +14,12 @@ function selectText(element) {
   }
 }
 
+// from http://stackoverflow.com/questions/19383319/test-for-transitionend-event-support-in-firefox 
+function isTransitionsSupported() { 
+  var thisBody = document.body || document.documentElement;
+  return thisBody.style.transition !== undefined
+}
+
 var nextActive = null, currentActive = null, ipsumKeynotes, ipsumQuotes; 
 
 ipsumKeynotes = [
@@ -93,7 +99,7 @@ function update_unactive_ipsum(){
 
 $(document).ready(function(){
   var wrapper = $('.ipsum-wrapper'), quotes_ipsum = $('#quotes'), keynotes_ipsum = $('#keynotes');
-  
+
   update_ipsum(quotes_ipsum);
   update_ipsum(keynotes_ipsum);
 
@@ -112,11 +118,14 @@ $(document).ready(function(){
   headers = ['ipsum', 'jobs', 'macipsum'];
   header = Math.floor(Math.random()*3);
   $('#header').attr('class', headers[header]);
-  
+
+  wrapper.addClass('transitionable'); // Stops any transitions on page load.
+
+
   $('.tabs a').on('click', function(e){
     e.preventDefault();
     wrapper.addClass('transitioning');
-    
+
     // Update the tabs first
     $('.tabs a').toggleClass('active');
 
@@ -124,24 +133,30 @@ $(document).ready(function(){
 
     var nextActive = $($(this).attr('href'));
     var currentActive = $('.ipsum-box .active');
+    if(isTransitionsSupported()){
+      // When the current quote is bigger then the other, make it adjust to the bigger height first.
+      if(currentActive.height() >= nextActive.height()){
+        quotes_ipsum.one('transitionend', function(){
+          wrapper.css('maxHeight', nextActive.height());
+          wrapper.one('transitionend', update_unactive_ipsum);
+        });
 
-    // When the current quote is bigger then the other, make it adjust to the bigger height first.
-    if(currentActive.height() >= nextActive.height()){
-      quotes_ipsum.one('transitionend', function(){
-        wrapper.css('maxHeight', nextActive.height());
-        wrapper.one('transitionend', update_unactive_ipsum);
-      });
-
-      currentActive.removeClass('active');
-      nextActive.addClass('active');
-    } else {
-      wrapper.css('maxHeight', nextActive.height());
-      
-      wrapper.one('transitionend', function(){
-        quotes_ipsum.one('transitionend', update_unactive_ipsum);
         currentActive.removeClass('active');
         nextActive.addClass('active');
-      });
+      } else {
+        wrapper.css('maxHeight', nextActive.height());
+
+        wrapper.one('transitionend', function(){
+          quotes_ipsum.one('transitionend', update_unactive_ipsum);
+          currentActive.removeClass('active');
+          nextActive.addClass('active');
+        });
+      }
+    } else {
+      wrapper.css('maxHeight', nextActive.height());
+      currentActive.removeClass('active');
+      nextActive.addClass('active');
+      wrapper.removeClass('transitioning');
     }
   });
 });

@@ -37,7 +37,10 @@
   width: 47.5%;
   outline: none;
 
-  transition: margin linear 0.75s, opacity linear 0.75s;
+  .transitionable & {
+    transition: margin linear 0.75s, opacity linear 0.75s;
+  }
+
   opacity: 0.5;
   &.active {
     opacity: 1;
