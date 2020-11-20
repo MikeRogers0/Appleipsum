@@ -1,1 +1,1 @@
-sass -w httpdocs/css/style.scss
+bundle exec sass -w httpdocs/css/style.scss
